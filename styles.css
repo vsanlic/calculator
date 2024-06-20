@@ -1,0 +1,62 @@
+body {
+    height: 98vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.calculator {
+    display: flex;
+    flex-direction: column;
+    height: 500px;
+    width: 400px;
+}
+
+.screen {
+    display: flex;
+    flex: 1;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: column;
+    flex: 3;
+}
+
+.row-1,
+.row-2,
+.row-3,
+.row-4,
+.row-5 {
+    display: flex;
+    flex: 1;
+}
+
+#clear-button {
+    flex: 3;
+}
+
+#divide-button,
+#multiply-button,
+#subtract-button,
+#add-button,
+#equal-to-button {
+    flex: 1;
+}
+
+#nine-button,
+#eight-button,
+#seven-button,
+#six-button,
+#five-button,
+#four-button,
+#three-button,
+#two-button,
+#one-button,
+#comma-button {
+    flex: 1;
+}
+
+#zero-button {
+    flex: 2;
+}
