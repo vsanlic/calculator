@@ -1,26 +1,56 @@
 body {
     height: 98vh;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
+    gap: 30px;
+}
+
+h1 {
+    font-family: Arial;
+    font-size: 50px;
+    margin-top: 70px;
+    text-shadow: 2px 0 goldenrod, -2px 0 goldenrod, 0 2px goldenrod, 0 -2px goldenrod, 
+                 1px 1px goldenrod, -1px -1px goldenrod, 1px -1px goldenrod, -1px 1px goldenrod;
+    border: solid black 5px;
+    border-radius: 8px;
+    padding: 5px 10px;
+    background-color: black;
 }
 
 .calculator {
     display: flex;
     flex-direction: column;
-    height: 500px;
-    width: 400px;
+    box-sizing: border-box;
+    height: 600px;
+    width: 500px;
+    font-family: Arial;
+    font-size: 50px;
+    font-weight: bold;
+    padding: 20px;
+    background-color: black;
+    gap: 20px;
+    border-radius: 8px;
 }
 
 .screen {
-    display: flex;
-    flex: 1;
+    box-sizing: border-box;
+    display: block;
+    flex: 1 20px;
+    background-color: rgb(187, 187, 187);
+    border-radius: 8px;
+    padding: 10px;
+    text-align: end;
+    color: rgb(37, 37, 37);
+    text-shadow: 2px 0 #fff, -2px 0 #fff, 0 2px #fff, 0 -2px #fff, 
+                 1px 1px #fff, -1px -1px #fff, 1px -1px #fff, -1px 1px #fff;
 }
 
 .button-container {
     display: flex;
     flex-direction: column;
     flex: 3;
+    gap: 5px;
 }
 
 .row-1,
@@ -30,33 +60,70 @@ body {
 .row-5 {
     display: flex;
     flex: 1;
+    gap: 5px;
 }
 
 #clear-button {
     flex: 3;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 8px;
+    box-sizing: border-box;
 }
 
-#divide-button,
-#multiply-button,
-#subtract-button,
-#add-button,
+.operator-button,
 #equal-to-button {
     flex: 1;
+    font-size: 20px;
+    background-color: goldenrod;
+    font-weight: bold;
+    border-radius: 8px;
+    box-sizing: border-box;
 }
 
-#nine-button,
-#eight-button,
-#seven-button,
-#six-button,
-#five-button,
-#four-button,
-#three-button,
-#two-button,
-#one-button,
-#comma-button {
+.number-button,
+#decimal-button {
     flex: 1;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 8px;
+    box-sizing: border-box;
 }
 
-#zero-button {
-    flex: 2;
+#decimal-button,
+#equal-to-button {
+    flex: 0 111.25px;
+}
+
+.row-1 .operator-button {
+    flex: 0 111.25px;
+}
+
+.row-5 .number-button {
+    flex: auto;
+}
+
+.number-button:hover,
+#clear-button:hover,
+#decimal-button:hover {
+    background-color: black;
+    color: white;
+    border: solid white 2px;
+    cursor: pointer;
+}
+
+.operator-button:hover,
+#equal-to-button:hover {
+    background-color: white;
+    border: solid goldenrod 2px;
+    cursor: pointer;
+}
+
+.number-button:active,
+.operator-button:active,
+#clear-button:active,
+#decimal-button:active,
+#equal-to-button:active {
+    opacity: 70%;
+    cursor: pointer;
 }
